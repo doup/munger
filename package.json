@@ -1,0 +1,35 @@
+{
+  "name": "munger",
+  "version": "0.0.1",
+  "description": "SASS+HTML components following BEM convention on top of Foundation",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://doup@github.com/doup/munger.git"
+  },
+  "keywords": [
+    "Foundation",
+    "CSS",
+    "Component",
+    "BEM"
+  ],
+  "author": "doup",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doup/munger/issues"
+  },
+  "homepage": "https://github.com/doup/munger#readme",
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "del": "^2.2.2",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-jade": "^1.1.0"
+  },
+  "dependencies": {
+    "magnific-popup": "^1.1.0",
+    "slick-carousel": "^1.6.0"
+  }
+}
