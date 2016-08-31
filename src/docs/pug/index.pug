@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        link(rel='stylesheet' type='text/css' href=url('/assets/docs.css'))
+        block title
+            title Index
+
+    body
+        aside
+            ul
+                li: a(href=url('/index.html')) Index
+                li Section
+                    ul
+                        li: a(href=url('/section/edge-image.html')) Edge Image
+
+        block content
+            h1 Welcome to Munger!
+
+        script(type='text/javascript' src=url('/assets/munger.js'))
