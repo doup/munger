@@ -1,4 +1,23 @@
 @charset "UTF-8";
+.mu-anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden; }
+
+.mu-edge-image {
+  position: relative; }
+
+.mu-edge-image__image {
+  float: left;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
+
+.mu-edge-image__content {
+  position: relative; }
+
 /**
  * Foundation for Sites by ZURB
  * Version 6.2.3
@@ -3303,16 +3322,3 @@ table.hover tr:nth-of-type(even):hover {
     order: 5; }
   .large-order-6 {
     order: 6; } }
-
-.mu-edge-image {
-  position: relative; }
-
-.mu-edge-image__image {
-  float: left;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0; }
-
-.mu-edge-image__content {
-  position: relative; }
