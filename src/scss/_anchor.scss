@@ -1,0 +1,10 @@
+$mu-anchor-offset: -100px !default;
+
+@mixin munger-anchor {
+    .mu-anchor {
+        display: block;
+        position: relative;
+        top: $mu-anchor-offset;
+        visibility: hidden;
+    }
+}
