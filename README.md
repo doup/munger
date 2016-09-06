@@ -2,6 +2,11 @@
 
 SASS+HTML components following BEM convention on top of Foundation
 
+## DEV
+
+- Development: `gulp`
+- Publish docs: `gulp publish-docs`
+
 ## TODO
 
 - Foundation 6 - Flexbox.
