@@ -1,4 +1,7 @@
 @import 'munger';
 
-@include munger-anchor;
+@include munger-misc-anchor;
+@include munger-misc-bg;
 @include munger-section-edge-image;
+@include munger-typography-small;
+@include munger-typography-text-columns;

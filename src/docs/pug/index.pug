@@ -1,19 +1,30 @@
 doctype html
 html
     head
-        link(rel='stylesheet' type='text/css' href=url('/assets/docs.css'))
         block title
             title Index
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto|Slabo+27px')
+        link(rel='stylesheet' href=url('/assets/docs.css'))
 
     body
         aside
             ul
                 li: a(href=url('/index.html')) Index
+                li Misc
+                    ul
+                        li: a(href=url('/misc/anchor.html')) Anchor
+                        li: a(href=url('/misc/bg.html')) Background Color
                 li Section
                     ul
                         li: a(href=url('/section/edge-image.html')) Edge Image
+                li Typography
+                    ul
+                        li: a(href=url('/typography/small.html')) Small/Smaller
+                        li: a(href=url('/typography/text-columns.html')) Text columns
+                li: a(href=url('/kitchen-sink.html')) Kitchen Sink
 
         block content
             h1 Welcome to Munger!
 
-        script(type='text/javascript' src=url('/assets/munger.js'))
+        script(src='https://code.jquery.com/jquery-3.1.0.min.js' integrity='sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=' crossorigin='anonymous')
+        script(src=url('/assets/munger.js'))

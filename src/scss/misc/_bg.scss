@@ -1,0 +1,11 @@
+$mu-bg-default-color: #fff !default;
+$mu-bg-neutral-color: #f8f8f8 !default;
+$mu-bg-primary-color: #b2c867 !default;
+$mu-bg-secondary-color: #fce6a4 !default;
+
+@mixin munger-misc-bg {
+    .mu-bg { background-color: $mu-bg-default-color; }
+    .mu-bg--neutral { background-color: $mu-bg-neutral-color; }
+    .mu-bg--primary { background-color: $mu-bg-primary-color; }
+    .mu-bg--secondary { background-color: $mu-bg-secondary-color; }
+}

@@ -1,0 +1,27 @@
+@mixin munger-typography-text-columns {
+    .mu-text-columns--2 {
+        @include breakpoint(large) {
+            column-count: 2;
+        }
+    }
+
+    .mu-text-columns--3 {
+        @include breakpoint(medium) {
+            column-count: 2;
+        }
+
+        @include breakpoint(large) {
+            column-count: 3;
+        }
+    }
+
+    .mu-text-columns--4 {
+        @include breakpoint(medium) {
+            column-count: 2;
+        }
+
+        @include breakpoint(large) {
+            column-count: 4;
+        }
+    }
+}

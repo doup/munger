@@ -1,4 +1,11 @@
 @charset 'utf-8';
 
-@import 'anchor';
+$mu-gutter: $grid-column-gutter;
+$mu-half-gutter: $mu-gutter / 2;
+$mu-quarter-gutter: $mu-gutter / 4;
+
+@import 'misc/anchor';
+@import 'misc/bg';
 @import 'section/edge-image';
+@import 'typography/small';
+@import 'typography/text-columns';
