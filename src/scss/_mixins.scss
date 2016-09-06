@@ -1,0 +1,16 @@
+@mixin mu-with-gutter-size($ratio, $properties...) {
+    @if type-of($grid-column-gutter) == 'map' {
+        @each $breakpoint, $value in $grid-column-gutter {
+            @include breakpoint($breakpoint) {
+                @each $property in $properties {
+                    #{$property}: rem-calc($value) * $ratio;
+                }
+            }
+        }
+    }
+    @else if type-of($grid-column-gutter) == 'number' and strip-unit($grid-column-gutter) > 0 {
+        @each $property in $properties {
+            #{$property}: rem-calc($grid-column-gutter) * $ratio;
+        }
+    }
+}

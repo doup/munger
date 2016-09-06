@@ -1,9 +1,6 @@
 @charset 'utf-8';
 
-$mu-gutter: $grid-column-gutter;
-$mu-half-gutter: $mu-gutter / 2;
-$mu-quarter-gutter: $mu-gutter / 4;
-
+@import 'mixins';
 @import 'misc/anchor';
 @import 'misc/bg';
 @import 'section/edge-image';

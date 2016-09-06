@@ -3357,10 +3357,16 @@ table.hover tr:nth-of-type(even):hover {
   background-color: inherit; }
 
 .mu-edge-image--left .mu-edge-image__content:before {
-  left: -20px; }
+  left: -0.9375rem; }
+  @media screen and (min-width: 40em) {
+    .mu-edge-image--left .mu-edge-image__content:before {
+      left: -1.25rem; } }
 
 .mu-edge-image--right .mu-edge-image__content:after {
-  right: -20px; }
+  right: -0.9375rem; }
+  @media screen and (min-width: 40em) {
+    .mu-edge-image--right .mu-edge-image__content:after {
+      right: -1.25rem; } }
 
 .mu-small {
   font-size: 0.9rem; }

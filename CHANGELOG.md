@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - Typography
         - `mu-small`/`mu-smaller`
         - `mu-text-columns`
+- `mu-with-gutter-size` mixin, useful to set property value using the different gutter sizes defined by Foundation `$grid-column-gutter`.
 
 ### Changed
 - …

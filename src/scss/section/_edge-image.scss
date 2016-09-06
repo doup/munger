@@ -3,13 +3,8 @@
         position: relative;
     }
 
-    .mu-edge-image--left {
-
-    }
-
-    .mu-edge-image--right {
-
-    }
+    .mu-edge-image--left {}
+    .mu-edge-image--right {}
 
     .mu-edge-image__image-wrapper {
         //float: left;
@@ -29,26 +24,7 @@
 
     .mu-edge-image__content {
         position: relative;
-        //padding-top: $mu-gutter;
-        //padding-bottom: $mu-gutter;
-
-        // TODO: Hau abstraitu…
-        // Gutters
-        @if type-of($mu-gutter) == 'map' {
-            @each $breakpoint, $value in $mu-gutter {
-                $padding: rem-calc($value) / 2;
-
-                @include breakpoint($breakpoint) {
-                    padding-top: $padding;
-                    padding-bottom: $padding;
-                }
-            }
-        }
-        @else if type-of($mu-gutter) == 'number' and strip-unit($mu-gutter) > 0 {
-            $padding: rem-calc($mu-gutter) / 2;
-            padding-top: $padding;
-            padding-bottom: $padding;
-        }
+        @include mu-with-gutter-size(.5, padding-top, padding-bottom);
     }
 
     .mu-edge-image--left .mu-edge-image__content:before,
@@ -62,10 +38,10 @@
     }
 
     .mu-edge-image--left .mu-edge-image__content:before {
-        left: -20px;
+        @include mu-with-gutter-size(-.5, left);
     }
 
     .mu-edge-image--right .mu-edge-image__content:after {
-        right: -20px;
+        @include mu-with-gutter-size(-.5, right);
     }
 }
