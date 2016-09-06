@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
-- Gulp build pipeline prepared
+- …
 - …
 
 ### Changed
@@ -17,3 +17,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - …
 - …
+
+## 0.1.0
+### Added
+- Project structure defined
+- Gulp build pipeline prepared

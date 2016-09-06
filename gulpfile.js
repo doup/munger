@@ -9,6 +9,7 @@ var isPublishDocsTask = argv._[0] == 'publish-docs';
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
+var reloadBrowser = function reloadBrowser(done) { browserSync.reload(); done(); };
 
 if (isPublishDocsTask) {
     var baseUrl = 'https://doup.github.io/munger';
@@ -56,7 +57,7 @@ gulp.task('docs:copy:public', function (done) {
 });
 
 gulp.task('docs:pug', function () {
-    return gulp.src('src/docs/pug/**/*.pug')
+    return gulp.src(['src/docs/pug/**/*.pug', '!src/docs/pug/**/_*.pug'])
         .pipe(pug({
             locals: {
                 url: (url) => baseUrl + url,
@@ -87,12 +88,18 @@ gulp.task('serve', function (done) {
             baseDir: './docs'
         }
     }, done);
+});
 
-    gulp.watch('src/pug/**/*.pug', gulp.series('docs', browserSync.reload));
+gulp.task('watch', function () {
+    gulp.watch('src/docs/pug/**/*.pug', gulp.series('docs:pug', reloadBrowser));
+    gulp.watch(['src/docs/scss/**', 'src/scss/**'], gulp.series('docs:scss', reloadBrowser));
+    gulp.watch(['src/docs/public/**', 'dist/**'], gulp.series('docs:copy', reloadBrowser));
+    gulp.watch('src/js/**', gulp.series('build:js'));
 });
 
 gulp.task('docs:copy', gulp.series('docs:copy:public', 'docs:copy:js'));
 gulp.task('docs', gulp.parallel('docs:pug', 'docs:scss', 'docs:copy'));
-gulp.task('build', gulp.series('clean', gulp.parallel('build:js:munger', 'build:js:packed')));
-gulp.task('publish-docs', gulp.series('build', 'docs', 'publish'));
-gulp.task('default', gulp.series('build', 'docs', 'serve'));
+gulp.task('build:js', gulp.parallel('build:js:munger', 'build:js:packed'));
+gulp.task('build', gulp.series('build:js'));
+gulp.task('publish-docs', gulp.series('clean', 'build', 'docs', 'publish'));
+gulp.task('default', gulp.series('clean', 'build', 'docs', 'serve', 'watch'));
