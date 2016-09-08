@@ -3357,16 +3357,28 @@ table.hover tr:nth-of-type(even):hover {
   background-color: inherit; }
 
 .mu-edge-image--left .mu-edge-image__content:before {
-  left: -20px; }
+  left: -0.9375rem; }
+  @media screen and (min-width: 40em) {
+    .mu-edge-image--left .mu-edge-image__content:before {
+      left: -1.25rem; } }
 
 .mu-edge-image--right .mu-edge-image__content:after {
-  right: -20px; }
+  right: -0.9375rem; }
+  @media screen and (min-width: 40em) {
+    .mu-edge-image--right .mu-edge-image__content:after {
+      right: -1.25rem; } }
 
 .mu-small {
   font-size: 0.9rem; }
 
 .mu-smaller {
   font-size: 0.8rem; }
+
+.mu-text-columns {
+  column-gap: 1.875rem; }
+  @media screen and (min-width: 40em) {
+    .mu-text-columns {
+      column-gap: 2.5rem; } }
 
 @media screen and (min-width: 64em) {
   .mu-text-columns--2 {
@@ -3382,7 +3394,7 @@ table.hover tr:nth-of-type(even):hover {
 
 @media screen and (min-width: 40em) {
   .mu-text-columns--4 {
-    column-count: 2; } }
+    column-count: 3; } }
 
 @media screen and (min-width: 64em) {
   .mu-text-columns--4 {
