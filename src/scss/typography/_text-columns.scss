@@ -1,4 +1,8 @@
 @mixin munger-typography-text-columns {
+    .mu-text-columns {
+        @include mu-with-gutter-size(1, column-gap);
+    }
+
     .mu-text-columns--2 {
         @include breakpoint(large) {
             column-count: 2;
@@ -17,7 +21,7 @@
 
     .mu-text-columns--4 {
         @include breakpoint(medium) {
-            column-count: 2;
+            column-count: 3;
         }
 
         @include breakpoint(large) {

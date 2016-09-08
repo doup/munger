@@ -3374,6 +3374,12 @@ table.hover tr:nth-of-type(even):hover {
 .mu-smaller {
   font-size: 0.8rem; }
 
+.mu-text-columns {
+  column-gap: 1.875rem; }
+  @media screen and (min-width: 40em) {
+    .mu-text-columns {
+      column-gap: 2.5rem; } }
+
 @media screen and (min-width: 64em) {
   .mu-text-columns--2 {
     column-count: 2; } }
@@ -3388,7 +3394,7 @@ table.hover tr:nth-of-type(even):hover {
 
 @media screen and (min-width: 40em) {
   .mu-text-columns--4 {
-    column-count: 2; } }
+    column-count: 3; } }
 
 @media screen and (min-width: 64em) {
   .mu-text-columns--4 {
