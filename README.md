@@ -19,6 +19,17 @@ SASS+HTML components following BEM convention on top of Foundation
 - Typography
     - Improved justify with JS plugin hyphenate~
     - Unorphan
+- Docs
+    - Document Mixins
+
+### Ideas componentes
+
+- http://avada.theme-fusion.com/whats-new-in-4-0/
+- https://theme.co/cornerstone/
+- https://theme.co/cornerstone/elements/
+- http://demos.artbees.net/jupiter5/
+- http://totaltheme.wpengine.com/features/builder-modules/
+- http://the7.dream-demo.com/
 
 ### Ideas
 

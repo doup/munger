@@ -1,16 +1,27 @@
-@mixin mu-with-gutter-size($ratio, $properties...) {
+@mixin mu-with-gutter-size($amount, $properties...) {
+    $ratio: null;
+    $base: null;
+
+    @if type-of($amount) == 'list' {
+        $ratio: nth($amount, 1);
+        $base: nth($amount, 2);
+    } else {
+        $ratio: $amount;
+        $base: 0;
+    }
+
     @if type-of($grid-column-gutter) == 'map' {
         @each $breakpoint, $value in $grid-column-gutter {
             @include breakpoint($breakpoint) {
                 @each $property in $properties {
-                    #{$property}: rem-calc($value) * $ratio;
+                    #{$property}: rem-calc($value) * $ratio + $amount;
                 }
             }
         }
     }
     @else if type-of($grid-column-gutter) == 'number' and strip-unit($grid-column-gutter) > 0 {
         @each $property in $properties {
-            #{$property}: rem-calc($grid-column-gutter) * $ratio;
+            #{$property}: rem-calc($grid-column-gutter) * $ratio + $amount;
         }
     }
 }

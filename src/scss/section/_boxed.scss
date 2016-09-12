@@ -1,0 +1,14 @@
+@mixin munger-section-boxed {
+    .mu-boxed {
+        $width: $global-width + rem-calc(map-get($grid-column-gutter, medium));
+
+        width: 100%;
+        margin: auto;
+        @include mu-with-gutter-size(1, padding-top, padding-bottom, margin-top, margin-bottom);
+        @include mu-with-gutter-size(0.5, padding-left, padding-right);
+
+        @include breakpoint($width) {
+            width: $width;
+        }
+    }
+}
