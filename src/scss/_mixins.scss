@@ -4,24 +4,24 @@
 
     @if type-of($amount) == 'list' {
         $ratio: nth($amount, 1);
-        $base: nth($amount, 2);
-    } else {
+        $base: nth($amount, 2) * 1px;
+    } @else {
         $ratio: $amount;
-        $base: 0;
+        $base: 0px;
     }
 
     @if type-of($grid-column-gutter) == 'map' {
         @each $breakpoint, $value in $grid-column-gutter {
             @include breakpoint($breakpoint) {
                 @each $property in $properties {
-                    #{$property}: rem-calc($value) * $ratio + $amount;
+                    #{$property}: rem-calc($value) * $ratio + rem-calc($base);
                 }
             }
         }
     }
     @else if type-of($grid-column-gutter) == 'number' and strip-unit($grid-column-gutter) > 0 {
         @each $property in $properties {
-            #{$property}: rem-calc($grid-column-gutter) * $ratio + $amount;
+            #{$property}: rem-calc($grid-column-gutter) * $ratio + rem-calc($base);
         }
     }
 }

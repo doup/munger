@@ -3325,22 +3325,22 @@ table.hover tr:nth-of-type(even):hover {
 .mu-boxed {
   width: 100%;
   margin: auto;
-  padding-top: 2.875rem;
-  padding-bottom: 2.875rem;
-  margin-top: 2.875rem;
-  margin-bottom: 2.875rem;
-  padding-left: 1.4375rem;
-  padding-right: 1.4375rem; }
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem; }
   @media screen and (min-width: 40em) {
     .mu-boxed {
-      padding-top: 3.5rem;
-      padding-bottom: 3.5rem;
-      margin-top: 3.5rem;
-      margin-bottom: 3.5rem; } }
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem; } }
   @media screen and (min-width: 40em) {
     .mu-boxed {
-      padding-left: 1.75rem;
-      padding-right: 1.75rem; } }
+      padding-left: 1.25rem;
+      padding-right: 1.25rem; } }
   @media screen and (min-width: 77.5em) {
     .mu-boxed {
       width: 77.5rem; } }
@@ -3363,33 +3363,37 @@ table.hover tr:nth-of-type(even):hover {
 
 .mu-edge-image__content {
   position: relative;
-  padding-top: 1.4375rem;
-  padding-bottom: 1.4375rem; }
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem; }
   @media screen and (min-width: 40em) {
     .mu-edge-image__content {
-      padding-top: 1.75rem;
-      padding-bottom: 1.75rem; } }
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem; } }
 
 .mu-edge-image--left .mu-edge-image__content:before,
 .mu-edge-image--right .mu-edge-image__content:after {
   content: '';
-  width: 20px;
   height: 100%;
   position: absolute;
   top: 0;
-  background-color: inherit; }
+  background-color: inherit;
+  width: 0.9375rem; }
+  @media screen and (min-width: 40em) {
+    .mu-edge-image--left .mu-edge-image__content:before,
+    .mu-edge-image--right .mu-edge-image__content:after {
+      width: 1.25rem; } }
 
 .mu-edge-image--left .mu-edge-image__content:before {
-  left: -1.4375rem; }
+  left: -0.9375rem; }
   @media screen and (min-width: 40em) {
     .mu-edge-image--left .mu-edge-image__content:before {
-      left: -1.75rem; } }
+      left: -1.25rem; } }
 
 .mu-edge-image--right .mu-edge-image__content:after {
-  right: -1.4375rem; }
+  right: -0.9375rem; }
   @media screen and (min-width: 40em) {
     .mu-edge-image--right .mu-edge-image__content:after {
-      right: -1.75rem; } }
+      right: -1.25rem; } }
 
 .mu-small {
   font-size: 0.9rem; }
@@ -3398,10 +3402,10 @@ table.hover tr:nth-of-type(even):hover {
   font-size: 0.8rem; }
 
 .mu-text-columns {
-  column-gap: 2.875rem; }
+  column-gap: 1.875rem; }
   @media screen and (min-width: 40em) {
     .mu-text-columns {
-      column-gap: 3.5rem; } }
+      column-gap: 2.5rem; } }
 
 @media screen and (min-width: 64em) {
   .mu-text-columns--2 {

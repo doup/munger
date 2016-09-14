@@ -30,11 +30,11 @@
     .mu-edge-image--left .mu-edge-image__content:before,
     .mu-edge-image--right .mu-edge-image__content:after {
         content: '';
-        width: 20px;
         height: 100%;
         position: absolute;
         top: 0;
         background-color: inherit;
+        @include mu-with-gutter-size(.5, width);
     }
 
     .mu-edge-image--left .mu-edge-image__content:before {
