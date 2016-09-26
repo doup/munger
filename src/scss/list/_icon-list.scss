@@ -1,0 +1,36 @@
+@mixin munger-list-icon-list {
+    .mu-icon-list {
+        margin: 0;
+        @include mu-with-gutter-size(.5, margin-top, margin-bottom);
+        @include mu-with-gutter-size(.8, padding-left);
+        font-size: $mu-small-size;
+    }
+
+    .mu-icon-list__entry {
+        list-style: none;
+        line-height: 1.25em;
+        @include mu-with-gutter-size(.125, margin-bottom);
+
+        .fa {
+            text-align: center;
+            @include mu-with-gutter-size(-.8, margin-left);
+            @include mu-with-gutter-size(.8, width);
+        }
+    }
+
+    .mu-icon-list--horizontal {
+        .mu-icon-list__entry {
+            display: inline-block;
+            @include mu-with-gutter-size(.25, margin-right);
+
+            .fa {
+                margin-left: 0;
+                @include mu-with-gutter-size(.65, width);
+            }
+
+            &:first-child .fa {
+                @include mu-with-gutter-size(-.8, margin-left);
+            }
+        }
+    }
+}

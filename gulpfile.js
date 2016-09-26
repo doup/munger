@@ -14,7 +14,7 @@ var reloadBrowser = function reloadBrowser(done) { browserSync.reload(); done();
 if (isPublishDocsTask) {
     var baseUrl = 'https://doup.github.io/munger';
 } else {
-    var baseUrl = 'http://localhost:3000';
+    var baseUrl = '';
 }
 
 gulp.task('clean', function () {
@@ -57,7 +57,7 @@ gulp.task('docs:copy:public', function (done) {
 });
 
 gulp.task('docs:pug', function () {
-    return gulp.src(['src/docs/pug/**/*.pug', '!src/docs/pug/**/_*.pug'])
+    return gulp.src(['src/docs/pug/**', '!src/docs/pug/**/_*.pug'])
         .pipe(pug({
             locals: {
                 url: (url) => baseUrl + url,
@@ -70,6 +70,7 @@ gulp.task('docs:scss', function () {
     return gulp.src('src/docs/scss/docs.scss')
         .pipe(sass({
             includePaths: [
+                'node_modules/font-awesome/scss',
                 'node_modules/foundation-sites/scss',
                 'src/scss',
             ]
@@ -91,7 +92,7 @@ gulp.task('serve', function (done) {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('src/docs/pug/**/*.pug', gulp.series('docs:pug', reloadBrowser));
+    gulp.watch('src/docs/pug/**', gulp.series('docs:pug', reloadBrowser));
     gulp.watch(['src/docs/scss/**', 'src/scss/**'], gulp.series('docs:scss', reloadBrowser));
     gulp.watch(['src/docs/public/**', 'dist/**'], gulp.series('docs:copy', reloadBrowser));
     gulp.watch('src/js/**', gulp.series('build:js'));

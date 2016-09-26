@@ -4,3 +4,6 @@
 @import 'settings/foundation-components';
 @import 'settings/munger-settings';
 @import 'settings/munger-components';
+
+$fa-font-path: "fonts";
+@import 'font-awesome';
