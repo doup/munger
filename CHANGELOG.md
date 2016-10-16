@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Following components added:
+    - List
+        - `mu-icon-list`
     - Misc
         - `mu-anchor`
         - `mu-bg`
