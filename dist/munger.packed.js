@@ -4751,6 +4751,8 @@ $.magnificPopup.registerModule(RETINA_NS, {
 
 }));
 
-$(function () {
-    console.log('Munger loaded!');
-});
+(function ($) {
+    $(function () {
+        // ...
+    });
+})(window.jQuery);

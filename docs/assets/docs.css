@@ -3308,15 +3308,12 @@ table.hover tr:nth-of-type(even):hover {
   margin: 0;
   margin-top: 0.9375rem;
   margin-bottom: 0.9375rem;
-  padding-left: 1.5rem;
+  padding-left: 2em;
   font-size: 0.9rem; }
   @media screen and (min-width: 40em) {
     .mu-icon-list {
       margin-top: 1.25rem;
       margin-bottom: 1.25rem; } }
-  @media screen and (min-width: 40em) {
-    .mu-icon-list {
-      padding-left: 2rem; } }
 
 .mu-icon-list__entry {
   list-style: none;
@@ -3327,32 +3324,19 @@ table.hover tr:nth-of-type(even):hover {
       margin-bottom: 0.3125rem; } }
   .mu-icon-list__entry .fa {
     text-align: center;
-    margin-left: -1.5rem;
-    width: 1.5rem; }
-    @media screen and (min-width: 40em) {
-      .mu-icon-list__entry .fa {
-        margin-left: -2rem; } }
-    @media screen and (min-width: 40em) {
-      .mu-icon-list__entry .fa {
-        width: 2rem; } }
+    margin-left: -2em;
+    width: 2em; }
 
-.mu-icon-list--horizontal .mu-icon-list__entry {
-  display: inline-block;
-  margin-right: 0.46875rem; }
-  @media screen and (min-width: 40em) {
-    .mu-icon-list--horizontal .mu-icon-list__entry {
-      margin-right: 0.625rem; } }
-  .mu-icon-list--horizontal .mu-icon-list__entry .fa {
-    margin-left: 0;
-    width: 1.21875rem; }
-    @media screen and (min-width: 40em) {
-      .mu-icon-list--horizontal .mu-icon-list__entry .fa {
-        width: 1.625rem; } }
-  .mu-icon-list--horizontal .mu-icon-list__entry:first-child .fa {
-    margin-left: -1.5rem; }
-    @media screen and (min-width: 40em) {
-      .mu-icon-list--horizontal .mu-icon-list__entry:first-child .fa {
-        margin-left: -2rem; } }
+.mu-icon-list--horizontal {
+  padding-left: 0; }
+  .mu-icon-list--horizontal .mu-icon-list__entry {
+    display: inline-block;
+    margin-right: 0.6em; }
+    .mu-icon-list--horizontal .mu-icon-list__entry .fa {
+      margin-left: 0;
+      width: 1.6em; }
+    .mu-icon-list--horizontal .mu-icon-list__entry:last-child {
+      margin-right: 0; }
 
 .mu-anchor {
   display: block;
@@ -3399,10 +3383,14 @@ table.hover tr:nth-of-type(even):hover {
   position: relative; }
 
 .mu-edge-image__image-wrapper {
-  position: absolute;
+  position: relative;
+  height: 200px;
   width: 100%;
-  height: 100%;
   z-index: 0; }
+  @media screen and (min-width: 40em) {
+    .mu-edge-image__image-wrapper {
+      position: absolute;
+      height: 100%; } }
 
 .mu-edge-image__image {
   height: 100%;
@@ -3420,28 +3408,31 @@ table.hover tr:nth-of-type(even):hover {
       padding-top: 1.25rem;
       padding-bottom: 1.25rem; } }
 
-.mu-edge-image--left .mu-edge-image__content:before,
-.mu-edge-image--right .mu-edge-image__content:after {
-  content: '';
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background-color: inherit;
-  width: 0.9375rem; }
-  @media screen and (min-width: 40em) {
+@media screen and (min-width: 40em) {
+  .mu-edge-image--left .mu-edge-image__content:before,
+  .mu-edge-image--right .mu-edge-image__content:after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: inherit;
+    width: 0.9375rem; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
     .mu-edge-image--left .mu-edge-image__content:before,
     .mu-edge-image--right .mu-edge-image__content:after {
       width: 1.25rem; } }
 
-.mu-edge-image--left .mu-edge-image__content:before {
-  left: -0.9375rem; }
-  @media screen and (min-width: 40em) {
+@media screen and (min-width: 40em) {
+  .mu-edge-image--left .mu-edge-image__content:before {
+    left: -0.9375rem; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
     .mu-edge-image--left .mu-edge-image__content:before {
       left: -1.25rem; } }
 
-.mu-edge-image--right .mu-edge-image__content:after {
-  right: -0.9375rem; }
-  @media screen and (min-width: 40em) {
+@media screen and (min-width: 40em) {
+  .mu-edge-image--right .mu-edge-image__content:after {
+    right: -0.9375rem; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
     .mu-edge-image--right .mu-edge-image__content:after {
       right: -1.25rem; } }
 
@@ -5667,3 +5658,27 @@ table.hover tr:nth-of-type(even):hover {
   margin: 0;
   overflow: visible;
   clip: auto; }
+
+header {
+  background-color: yellow; }
+
+.labcoop {
+  padding-top: 20px; }
+  .labcoop .social-container {
+    height: 20px; }
+  .labcoop .menu-container {
+    margin-top: -20px; }
+
+.flex-row {
+  display: flex; }
+
+.logo {
+  display: block;
+  width: 200px;
+  height: 70px;
+  background-color: #ccc;
+  text-indent: -999em; }
+
+.menu li {
+  list-style: none;
+  display: inline-block; }

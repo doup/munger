@@ -2,7 +2,8 @@
     .mu-icon-list {
         margin: 0;
         @include mu-with-gutter-size(.5, margin-top, margin-bottom);
-        @include mu-with-gutter-size(.8, padding-left);
+        //@include mu-with-gutter-size(.8, padding-left);
+        padding-left: 2em;
         font-size: $mu-small-size;
     }
 
@@ -13,23 +14,25 @@
 
         .fa {
             text-align: center;
-            @include mu-with-gutter-size(-.8, margin-left);
-            @include mu-with-gutter-size(.8, width);
+            margin-left: -2em;
+            width: 2em;
         }
     }
 
     .mu-icon-list--horizontal {
+        padding-left: 0;
+
         .mu-icon-list__entry {
             display: inline-block;
-            @include mu-with-gutter-size(.25, margin-right);
+            margin-right: 0.6em;
 
             .fa {
                 margin-left: 0;
-                @include mu-with-gutter-size(.65, width);
+                width: 1.6em;
             }
 
-            &:first-child .fa {
-                @include mu-with-gutter-size(-.8, margin-left);
+            &:last-child {
+                margin-right: 0;
             }
         }
     }

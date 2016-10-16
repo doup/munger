@@ -7,3 +7,38 @@
 
 $fa-font-path: "fonts";
 @import 'font-awesome';
+
+header {
+    background-color: yellow;
+}
+
+.labcoop {
+    padding-top: 20px;
+
+    .social-container {
+        height: 20px;
+    }
+
+    .menu-container {
+        margin-top: -20px;
+    }
+}
+
+.flex-row {
+    display: flex;
+}
+
+.logo {
+    display: block;
+    width: 200px;
+    height: 70px;
+    background-color: #ccc;
+    text-indent: -999em;
+}
+
+.menu {
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+}

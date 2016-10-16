@@ -7,11 +7,15 @@
     .mu-edge-image--right {}
 
     .mu-edge-image__image-wrapper {
-        //float: left;
-        position: absolute;
+        position: relative;
+        height: 200px;
         width: 100%;
-        height: 100%;
         z-index: 0;
+
+        @include breakpoint(medium) {
+            position: absolute;
+            height: 100%;
+        }
     }
 
     .mu-edge-image__image {
@@ -27,21 +31,23 @@
         @include mu-with-gutter-size(.5, padding-top, padding-bottom);
     }
 
-    .mu-edge-image--left .mu-edge-image__content:before,
-    .mu-edge-image--right .mu-edge-image__content:after {
-        content: '';
-        height: 100%;
-        position: absolute;
-        top: 0;
-        background-color: inherit;
-        @include mu-with-gutter-size(.5, width);
-    }
+    @include breakpoint(medium) {
+        .mu-edge-image--left .mu-edge-image__content:before,
+        .mu-edge-image--right .mu-edge-image__content:after {
+            content: '';
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background-color: inherit;
+            @include mu-with-gutter-size(.5, width);
+        }
 
-    .mu-edge-image--left .mu-edge-image__content:before {
-        @include mu-with-gutter-size(-.5, left);
-    }
+        .mu-edge-image--left .mu-edge-image__content:before {
+            @include mu-with-gutter-size(-.5, left);
+        }
 
-    .mu-edge-image--right .mu-edge-image__content:after {
-        @include mu-with-gutter-size(-.5, right);
+        .mu-edge-image--right .mu-edge-image__content:after {
+            @include mu-with-gutter-size(-.5, right);
+        }
     }
 }
