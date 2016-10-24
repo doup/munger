@@ -2,6 +2,8 @@ $mu-small-size: .9rem !default;
 $mu-smaller-size: .8rem !default;
 
 @mixin munger-typography-small {
-    .mu-small { font-size: $mu-small-size; }
-    .mu-smaller { font-size: $mu-smaller-size; }
+    @include breakpoint(medium) {
+        .mu-small { font-size: $mu-small-size; }
+        .mu-smaller { font-size: $mu-smaller-size; }
+    }
 }
