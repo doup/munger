@@ -8,9 +8,14 @@ html
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
 
     body
-        aside
+        .components-menu-hamburger(data-components-menu-toggle)
+            i.fa.fa-bars
+        aside.components-menu(data-components-menu style="display: none;")
             ul
                 li: a(href=url('/index.html')) Index
+                li Layout
+                    ul
+                        li: a(href=url('/layout/footer.html')) Footer
                 li List
                     ul
                         li: a(href=url('/list/icon-list.html')) Icon List
@@ -27,10 +32,14 @@ html
                         li: a(href=url('/typography/small.html')) Small/Smaller
                         li: a(href=url('/typography/text-columns.html')) Text columns
                 li: a(href=url('/kitchen-sink.html')) Kitchen Sink
+        .component-title
+            block title
 
         block content
             .row.columns
                 h1 Welcome to Munger!
 
-        script(src='https://code.jquery.com/jquery-3.1.0.min.js' integrity='sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=' crossorigin='anonymous')
+        //-script(src='https://code.jquery.com/jquery-3.1.0.min.js' integrity='sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=' crossorigin='anonymous')
+        script(src=url('/assets/jquery.js'))
         script(src=url('/assets/munger.js'))
+        script(src=url('/assets/docs.js'))
