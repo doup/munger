@@ -67,7 +67,7 @@ gulp.task('docs:pug', function () {
 });
 
 gulp.task('docs:scss', function () {
-    return gulp.src('src/docs/scss/docs.scss')
+    return gulp.src('src/docs/scss/*.scss')
         .pipe(sass({
             includePaths: [
                 'node_modules/font-awesome/scss',

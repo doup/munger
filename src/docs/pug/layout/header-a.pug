@@ -1,0 +1,18 @@
+extends ../index.pug
+
+block title
+    | mu-header (A)
+
+block css
+    link(rel='stylesheet' href=url('/assets/header-a.css'))
+
+block content
+    header.mu-header
+        .row.column.mu-header__logo-row
+            a(href='#')
+                h1.mu-header__logo Cello Verd
+        .row.column
+            include ../partials/_menu
+
+    include ../partials/_twelve-columns
+    div(style="min-height: 200%;")

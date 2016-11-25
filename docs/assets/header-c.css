@@ -1,0 +1,15 @@
+.mu-header__logo-row {
+  height: 4.0625rem; }
+  @media screen and (min-width: 40em) {
+    .mu-header__logo-row {
+      height: 4.375rem; } }
+
+.mu-header__logo {
+  margin: 0;
+  width: 250px;
+  height: 50px;
+  display: inline-block;
+  text-indent: -999em; }
+
+.mu-header__logo {
+  background-color: #ccc; }

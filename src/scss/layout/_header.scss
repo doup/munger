@@ -1,0 +1,19 @@
+$mu-header-logo-size: 260px 80px !default;
+
+@mixin munger-layout-header {
+    .mu-header {
+
+    }
+
+    .mu-header__logo-row {
+        @include mu-with-gutter-size(.5 nth($mu-header-logo-size, 2), height);
+    }
+
+    .mu-header__logo {
+        margin: 0;
+        width: nth($mu-header-logo-size, 1);
+        height: nth($mu-header-logo-size, 2);
+        display: inline-block;
+        text-indent: -999em;
+    }
+}

@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Following components added:
     - Layout
         - `mu-footer`
+        - `mu-header`
     - List
         - `mu-icon-list`
     - Misc

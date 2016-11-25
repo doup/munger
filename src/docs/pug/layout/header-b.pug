@@ -1,0 +1,15 @@
+extends ../index.pug
+
+block title
+    | mu-header (A)
+
+block css
+    link(rel='stylesheet' href=url('/assets/header-b.css'))
+
+block content
+    header.mu-header
+        .row.column.mu-header__logo-row
+            h1.mu-header__logo La Cop
+
+    include ../partials/_twelve-columns
+    div(style="min-height: 200%;")

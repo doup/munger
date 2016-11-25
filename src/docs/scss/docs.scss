@@ -10,10 +10,6 @@ $fa-font-path: "fonts";
 
 @import 'layout';
 
-header {
-    background-color: yellow;
-}
-
 .labcoop {
     padding-top: 20px;
 
@@ -28,14 +24,6 @@ header {
 
 .flex-row {
     display: flex;
-}
-
-.logo {
-    display: block;
-    width: 200px;
-    height: 70px;
-    background-color: #ccc;
-    text-indent: -999em;
 }
 
 .menu {

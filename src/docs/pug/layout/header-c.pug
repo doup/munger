@@ -1,0 +1,15 @@
+extends ../index.pug
+
+block title
+    | mu-header (C)
+
+block css
+    link(rel='stylesheet' href=url('/assets/header-c.css'))
+
+block content
+    header.mu-header
+        .row.column.mu-header__logo-row
+            h1.mu-header__logo.mu-header--large-center Mugari
+
+    include ../partials/_twelve-columns
+    div(style="min-height: 200%;")
