@@ -1,4 +1,5 @@
 extends ../index.pug
+include ../partials/_menu
 
 block title
     | mu-header (C)
@@ -8,8 +9,13 @@ block css
 
 block content
     header.mu-header
-        .row.column.mu-header__logo-row
-            h1.mu-header__logo.mu-header--large-center Mugari
+        .row.column.mu-header__logo-row.mu-header__logo-row--large-space-between
+            +menu-a('mu-header__menu mu-header__menu--start')
+            a.mu-header__logo(href='#')
+                h1 Mugari
+            +menu-b('mu-header__menu mu-header__menu--end show-for-large')
+            .mu-header__hover.mu-header__hover--middle.hide-for-large
+                a.mu-header__hamburger: i.fa.fa-fw.fa-bars
 
     include ../partials/_twelve-columns
     div(style="min-height: 200%;")

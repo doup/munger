@@ -1,19 +1,130 @@
 $mu-header-logo-size: 260px 80px !default;
+$mu-header-padding: .5 !default;
 
 @mixin munger-layout-header {
+    $mu-header-logo-row-height: ($mu-header-padding * 2) nth($mu-header-logo-size, 2);
+    
     .mu-header {
-
+        
     }
 
     .mu-header__logo-row {
-        @include mu-with-gutter-size(.5 nth($mu-header-logo-size, 2), height);
+        display: flex !important;
+        position: relative;
+        background-color: yellow;
+        @include mu-with-gutter-size($mu-header-logo-row-height, height);
+    
+    }
+    
+    .mu-header__menu {        
+        > li > a {
+            @include mu-with-gutter-size($mu-header-logo-row-height, height, line-height);
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    
+    .mu-header__menu--start {
+        > li:first-child > a {
+            margin-left: -1rem;
+        }
+    }
+    
+    .mu-header__menu--end {
+        > li:last-child > a {
+            margin-right: -1rem;
+        }
+    }
+    
+    .mu-header__menu--text-bottom {
+        > li > a {
+            @include mu-with-gutter-size($mu-header-padding, padding-bottom);
+            display: table-cell;
+            vertical-align: bottom;
+            line-height: 1em !important;
+        }
+        
+        > .is-dropdown-submenu-parent > a:after {
+            top: inherit;
+            @include mu-with-gutter-size($mu-header-padding 5, bottom);
+        }
+    }
+    
+    @each $size in (medium large) {
+        .mu-header__logo-row--#{$size}-space-between {
+            @include breakpoint($size) {
+                justify-content: space-between;
+            }
+        }
+        
+        .mu-header .mu-header__logo-row--#{$size}-space-around {
+            @include breakpoint($size) {
+                justify-content: space-around;
+            }
+        }
     }
 
     .mu-header__logo {
-        margin: 0;
+        @include mu-with-gutter-size($mu-header-padding, margin-top);
         width: nth($mu-header-logo-size, 1);
         height: nth($mu-header-logo-size, 2);
         display: inline-block;
         text-indent: -999em;
+    }
+    
+    .mu-header__hamburger {
+        margin-left: .5em;
+        display: inline-block;
+        line-height: 38px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 19.2px;
+        border: 1px solid #eee;
+        border-radius: 3px;
+    }
+    
+    .mu-header__hover {
+        position: absolute;
+        @include mu-with-gutter-size($mu-header-padding, top);
+        @include mu-with-gutter-size(.5, right);
+    }
+    
+    .mu-header__hover--left {
+        @include mu-with-gutter-size(.5, left);
+        right: auto;
+    }
+    
+    .mu-header__hover--top-edge {
+        top: 0;
+    }
+    
+    .mu-header__hover--middle {
+        @include mu-with-gutter-size($mu-header-logo-row-height, height);
+        top: 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    .mu-header__hover--bottom {
+        @include mu-with-gutter-size($mu-header-padding, bottom);
+        top: inherit;
+    }
+    
+    .mu-header__alt-menu {
+        display: inline-block;
+        font-size: 1.1rem;
+        margin: 0;
+        border-right: 1px solid #eee;
+
+        li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 .5em;
+        }
+    }
+    
+    .mu-header__alt-menu:last-child {
+        border-right: 0;
     }
 }

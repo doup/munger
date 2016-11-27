@@ -2,20 +2,20 @@
   display: flex !important;
   position: relative;
   background-color: yellow;
-  height: 6.875rem; }
+  height: 5.625rem; }
   @media screen and (min-width: 40em) {
     .mu-header__logo-row {
-      height: 7.5rem; } }
+      height: 6.25rem; } }
 
 .mu-header__menu > li > a {
-  height: 6.875rem;
-  line-height: 6.875rem;
+  height: 5.625rem;
+  line-height: 5.625rem;
   padding-top: 0;
   padding-bottom: 0; }
   @media screen and (min-width: 40em) {
     .mu-header__menu > li > a {
-      height: 7.5rem;
-      line-height: 7.5rem; } }
+      height: 6.25rem;
+      line-height: 6.25rem; } }
 
 .mu-header__menu--start > li:first-child > a {
   margin-left: -1rem; }
@@ -57,8 +57,8 @@
 
 .mu-header__logo {
   margin-top: 0.9375rem;
-  width: 80px;
-  height: 80px;
+  width: 288px;
+  height: 60px;
   display: inline-block;
   text-indent: -999em; }
   @media screen and (min-width: 40em) {
@@ -98,13 +98,13 @@
   top: 0; }
 
 .mu-header__hover--middle {
-  height: 6.875rem;
+  height: 5.625rem;
   top: 0;
   display: flex;
   align-items: center; }
   @media screen and (min-width: 40em) {
     .mu-header__hover--middle {
-      height: 7.5rem; } }
+      height: 6.25rem; } }
 
 .mu-header__hover--bottom {
   bottom: 0.9375rem;

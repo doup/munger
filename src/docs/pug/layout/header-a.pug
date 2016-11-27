@@ -1,4 +1,5 @@
 extends ../index.pug
+include ../partials/_menu
 
 block title
     | mu-header (A)
@@ -9,10 +10,23 @@ block css
 block content
     header.mu-header
         .row.column.mu-header__logo-row
-            a(href='#')
-                h1.mu-header__logo Cello Verd
-        .row.column
-            include ../partials/_menu
+            a.mu-header__logo(href='#')
+                h1 Cello Verd
+            .mu-header__hover.show-for-large
+                ul.mu-header__alt-menu
+                    li: a(href='#') ES
+                    li: a(href='#') CA
+                    li: a(href='#') EN
+                ul.mu-header__alt-menu.mu-header__alt-menu--separator
+                    li: a(href='#') <i class="fa fa-fw fa-linkedin"></i>
+                    li: a(href='#') <i class="fa fa-fw fa-twitter"></i>
+                    li: a(href='#') <i class="fa fa-fw fa-facebook"></i>
+                ul.mu-header__alt-menu.mu-header__alt-menu--separator
+                    li: a(href='#') <i class="fa fa-fw fa-search"></i>
+            .mu-header__hover.mu-header__hover--middle.hide-for-large
+                a.mu-header__hamburger: i.fa.fa-fw.fa-bars
+        .row.column.show-for-large
+            +menu('mu-header__menu--start')
 
     include ../partials/_twelve-columns
     div(style="min-height: 200%;")

@@ -30,6 +30,6 @@
 
 .component-title {
     position: fixed;
-    @include mu-with-gutter-size(.25, top, right);
+    @include mu-with-gutter-size(.25, bottom, left);
     z-index: 9999;
 }

@@ -3,10 +3,16 @@ extends ../index.pug
 block title
     | mu-header (E)
 
+block css
+    link(rel='stylesheet' href=url('/assets/header-e.css'))
+
 block content
     header.mu-header
-        .row.column.mu-header__logo-row
-            h1.mu-header__logo.mu-header--medium-center Mess
+        .row.column.mu-header__logo-row.mu-header__logo-row--medium-space-around
+            a.mu-header__logo(href='#')
+                h1 Mess
+            .mu-header__hover.mu-header__hover--top-edge.hide-for-large
+                a.mu-header__hamburger: i.fa.fa-fw.fa-bars
             
     include ../partials/_twelve-columns
     div(style="min-height: 200%;")

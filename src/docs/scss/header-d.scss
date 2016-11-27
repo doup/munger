@@ -1,0 +1,10 @@
+@import 'settings/foundation-settings';
+@import 'munger';
+
+$mu-header-logo-size: 375px 86px;
+
+@include munger-layout-header;
+
+.mu-header__logo {
+    background-color: #ccc;
+}
