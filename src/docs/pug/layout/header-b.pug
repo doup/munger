@@ -7,18 +7,19 @@ block title
 block css
     link(rel='stylesheet' href=url('/assets/header-b.css'))
 
-block content
-    header.mu-header
-        .row.column.mu-header__logo-row.mu-header__logo-row--large-space-between
+block header
+    header.mu-header.header-b(data-mu-fixed='small medium large')
+        .row.column.mu-header__row.mu-header__row--logo.mu-header__row--large-space-between
             a.mu-header__logo(href='#')
                 h1 La Boop
-            +menu('mu-header__menu mu-header__menu--text-bottom mu-header__menu--end show-for-large')
-            .mu-header__hover
+            +menu('header-b__menu mu-header__menu mu-header__menu--text-bottom mu-header__menu--end show-for-large')
+            .mu-header__hover.header-b__social-links
                 ul.mu-header__alt-menu
                     li: a(href='#') <i class="fa fa-fw fa-facebook"></i>
                     li: a(href='#') <i class="fa fa-fw fa-twitter"></i>
             .mu-header__hover.mu-header__hover--bottom.hide-for-large
                 a.mu-header__hamburger: i.fa.fa-fw.fa-bars
 
+block content
     include ../partials/_twelve-columns
-    div(style="min-height: 200%;")
+    div(style="min-height: 200vh;")

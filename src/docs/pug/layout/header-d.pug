@@ -6,22 +6,24 @@ block title
 block css
     link(rel='stylesheet' href=url('/assets/header-d.css'))
 
-block content
+block header
     header.mu-header
-        .row.column.mu-header__logo-row.mu-header__logo-row--medium-space-around
-            a.mu-header__logo(href='#')
-                h1 Mekop
-            .mu-header__hover.mu-header__hover--left.show-for-medium
-                ul.mu-header__alt-menu
-                    li: a(href='#') ES
-                    li: a(href='#') CA
-            .mu-header__hover.show-for-medium
-                ul.mu-header__alt-menu
-                    li: a(href='#') <i class="fa fa-fw fa-twitter"></i>
-                    li: a(href='#') <i class="fa fa-fw fa-facebook"></i>
-                a.mu-header__hamburger: i.fa.fa-fw.fa-bars
-            .mu-header__hover.mu-header__hover--middle.show-for-small-only
-                a.mu-header__hamburger: i.fa.fa-fw.fa-bars
+        .header-d__logo-wrapper(data-mu-fixed='small medium large')
+            .row.column.mu-header__row.mu-header__row--logo.mu-header__row--medium-space-around
+                a.mu-header__logo(href='#')
+                    h1 Mekop
+                .mu-header__hover.mu-header__hover--left.show-for-medium
+                    ul.mu-header__alt-menu
+                        li: a(href='#') ES
+                        li: a(href='#') CA
+                .mu-header__hover.show-for-medium
+                    ul.mu-header__alt-menu
+                        li: a(href='#') <i class="fa fa-fw fa-twitter"></i>
+                        li: a(href='#') <i class="fa fa-fw fa-facebook"></i>
+                    a.mu-header__hamburger: i.fa.fa-fw.fa-bars
+                .mu-header__hover.mu-header__hover--middle.show-for-small-only
+                    a.mu-header__hamburger: i.fa.fa-fw.fa-bars
 
+block content
     include ../partials/_twelve-columns
-    div(style="min-height: 200%;")
+    div(style="min-height: 200vh;")
