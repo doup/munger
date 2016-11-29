@@ -57,6 +57,40 @@ $mu-header-padding: .5 !default;
         padding-bottom: 0;
     }
     
+    .mu-header__column--left {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .mu-header__column--center {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mu-header__column--right {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    @each $size in (small medium large) {
+        @include breakpoint($size) {
+            .mu-header__column--#{$size}-left {
+                display: flex;
+                justify-content: flex-start;
+            }
+            
+            .mu-header__column--#{$size}-center {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .mu-header__column--#{$size}-right {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+    
     .mu-header__menu {        
         > li > a {
             padding-top: 0;
@@ -87,20 +121,6 @@ $mu-header-padding: .5 !default;
         > .is-dropdown-submenu-parent > a:after {
             top: inherit;
             @include mu-with-gutter-size($mu-header-padding 5, bottom);
-        }
-    }
-    
-    @each $size in (small medium large) {
-        .mu-header__row--#{$size}-space-between {
-            @include breakpoint($size) {
-                justify-content: space-between;
-            }
-        }
-        
-        .mu-header__row--#{$size}-space-around {
-            @include breakpoint($size) {
-                justify-content: space-around;
-            }
         }
     }
 
@@ -135,6 +155,12 @@ $mu-header-padding: .5 !default;
     
     .mu-header__hover--top-edge {
         top: 0;
+        
+        .mu-header__hamburger {
+            border-top: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
     }
     
     .mu-header__hover--middle {

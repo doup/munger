@@ -9,10 +9,12 @@ block css
 
 block header
     header.mu-header.header-b(data-mu-fixed='small medium large')
-        .row.column.mu-header__row.mu-header__row--logo.mu-header__row--large-space-between
-            a.mu-header__logo(href='#')
-                h1 La Boop
-            +menu('header-b__menu mu-header__menu mu-header__menu--text-bottom mu-header__menu--end show-for-large')
+        .row.mu-header__row.mu-header__row--logo
+            .large-3.columns
+                a.mu-header__logo(href='#')
+                    h1 La Boop
+            .large-9.columns.mu-header__column--right
+                +menu('header-b__menu mu-header__menu mu-header__menu--text-bottom mu-header__menu--end show-for-large')
             .mu-header__hover.header-b__social-links
                 ul.mu-header__alt-menu
                     li: a(href='#') <i class="fa fa-fw fa-facebook"></i>
