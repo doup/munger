@@ -5,10 +5,20 @@ $mu-header-logo-size: 375px 86px;
 
 @include munger-layout-header;
 
+.header-d, .header-d__logo-wrapper, .mu-header__row--logo {
+    background-color: #fff;
+}
+
 .mu-fixed__element {
-    height: 80px;
+    .mu-header__row--logo {
+        transition: height 500ms;
+        height: 80px;
+    }
     
     .mu-header__logo {
+        transition: all 500ms;
+        height: 70px;
         opacity: 0;
+        margin-top: 5px;
     }
 }

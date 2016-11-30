@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Basic non-intrusive menu for the docs
 - Following components added:
     - Layout
-        - `mu-footer`
+        - `mu-align`
+        - `mu-fixed`
         - `mu-header`
     - List
         - `mu-icon-list`

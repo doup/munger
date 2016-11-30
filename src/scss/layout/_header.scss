@@ -57,40 +57,6 @@ $mu-header-padding: .5 !default;
         padding-bottom: 0;
     }
     
-    .mu-header__column--left {
-        display: flex;
-        justify-content: flex-start;
-    }
-    
-    .mu-header__column--center {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .mu-header__column--right {
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    @each $size in (small medium large) {
-        @include breakpoint($size) {
-            .mu-header__column--#{$size}-left {
-                display: flex;
-                justify-content: flex-start;
-            }
-            
-            .mu-header__column--#{$size}-center {
-                display: flex;
-                justify-content: center;
-            }
-            
-            .mu-header__column--#{$size}-right {
-                display: flex;
-                justify-content: flex-end;
-            }
-        }
-    }
-    
     .mu-header__menu {        
         > li > a {
             padding-top: 0;

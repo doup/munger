@@ -1,4 +1,8 @@
-.components-menu-hamburger {
+html, body {
+    background-color: #fff;
+}
+
+.docs-menu-hamburger {
     position: fixed;
     @include mu-with-gutter-size(.25, top, left);
     width: 50px;
@@ -14,7 +18,7 @@
     color: #666;
 }
 
-.components-menu {
+.docs-menu {
     position: fixed;
     @include mu-with-gutter-size(.25, top, left);
     @include mu-with-gutter-size(.5, padding);
@@ -28,7 +32,7 @@
     z-index: 99999;
 }
 
-.component-title {
+.docs-title {
     position: fixed;
     @include mu-with-gutter-size(.25, bottom, left);
     z-index: 9999;

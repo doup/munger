@@ -1,11 +1,11 @@
 $(function () {
     $(document).foundation();
 
-    $('[data-components-menu-toggle]').hover(function () {
-        $('[data-components-menu]').show();
+    $('[data-docs-menu-toggle]').hover(function () {
+        $('[data-docs-menu]').show();
     })
 
-    $('[data-components-menu]').mouseleave(function () {
+    $('[data-docs-menu]').mouseleave(function () {
         $(this).hide()
     });
 });

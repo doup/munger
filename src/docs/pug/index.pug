@@ -9,13 +9,14 @@ html
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
 
     body
-        .components-menu-hamburger(data-components-menu-toggle)
+        .docs-menu-hamburger(data-docs-menu-toggle)
             i.fa.fa-bars
-        aside.components-menu(data-components-menu style="display: none;")
+        aside.docs-menu(data-docs-menu style="display: none;")
             ul
                 li: a(href=url('/index.html')) Index
                 li Layout
                     ul
+                        li: a(href=url('/layout/align.html')) Align
                         li: a(href=url('/layout/header-a.html')) Header A (Cello Verd)
                         li: a(href=url('/layout/header-b.html')) Header B (La Boop)
                         li: a(href=url('/layout/header-c.html')) Header C (Mugari)
@@ -38,7 +39,7 @@ html
                         li: a(href=url('/typography/small.html')) Small/Smaller
                         li: a(href=url('/typography/text-columns.html')) Text columns
                 li: a(href=url('/kitchen-sink.html')) Kitchen Sink
-        .component-title
+        .docs-title
             block title
 
         block header

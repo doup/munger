@@ -1,5 +1,6 @@
 @import 'munger';
 
+@include munger-layout-align;
 //@include munger-layout-header;
 @include munger-layout-fixed;
 @include munger-list-icon-list;

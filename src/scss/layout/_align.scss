@@ -1,0 +1,35 @@
+@mixin munger-layout-align {  
+    .mu-align--left {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .mu-align--center {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mu-align--right {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    @each $size in (small medium large) {
+        @include breakpoint($size) {
+            .mu-align--#{$size}-left {
+                display: flex;
+                justify-content: flex-start;
+            }
+            
+            .mu-align--#{$size}-center {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .mu-align--#{$size}-right {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}

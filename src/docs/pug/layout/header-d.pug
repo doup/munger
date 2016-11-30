@@ -7,19 +7,25 @@ block css
     link(rel='stylesheet' href=url('/assets/header-d.css'))
 
 block header
-    header.mu-header
-        .header-d__logo-wrapper(data-mu-fixed='small medium large')
-            .row.column.mu-header__row.mu-header__row--logo.mu-header__row--medium-space-around
-                a.mu-header__logo(href='#')
-                    h1 Mekop
+    header.mu-header.header-d        
+        .row.mu-header__row(style="border-bottom: 1px solid #eee;")
+            .small-6.columns
+                div(style="width: 146px; height: 36px; background-color: #eee;")
+            .small-6.columns.mu-align--right
+                p.mu-small © 2016 | XYZ
+        .header-d__logo-wrapper(data-mu-fixed='small medium large')            
+            .row.mu-header__row.mu-header__row--logo
+                .small-12.columns.mu-align--medium-center
+                    a.mu-header__logo(href='#')
+                        h1 Mekop
                 .mu-header__hover.mu-header__hover--left.show-for-medium
                     ul.mu-header__alt-menu
-                        li: a(href='#') ES
-                        li: a(href='#') CA
+                        li: a(href='#') CAT
+                        li: a(href='#') ESP
                 .mu-header__hover.show-for-medium
                     ul.mu-header__alt-menu
-                        li: a(href='#') <i class="fa fa-fw fa-twitter"></i>
-                        li: a(href='#') <i class="fa fa-fw fa-facebook"></i>
+                        li: a(href='#') TW
+                        li: a(href='#') FB
                     a.mu-header__hamburger: i.fa.fa-fw.fa-bars
                 .mu-header__hover.mu-header__hover--middle.show-for-small-only
                     a.mu-header__hamburger: i.fa.fa-fw.fa-bars

@@ -3328,6 +3328,52 @@ table.hover tbody tr:nth-of-type(even):hover {
   .large-order-6 {
     order: 6; } }
 
+.mu-align--left {
+  display: flex;
+  justify-content: flex-start; }
+
+.mu-align--center {
+  display: flex;
+  justify-content: center; }
+
+.mu-align--right {
+  display: flex;
+  justify-content: flex-end; }
+
+.mu-align--small-left {
+  display: flex;
+  justify-content: flex-start; }
+
+.mu-align--small-center {
+  display: flex;
+  justify-content: center; }
+
+.mu-align--small-right {
+  display: flex;
+  justify-content: flex-end; }
+
+@media screen and (min-width: 40em) {
+  .mu-align--medium-left {
+    display: flex;
+    justify-content: flex-start; }
+  .mu-align--medium-center {
+    display: flex;
+    justify-content: center; }
+  .mu-align--medium-right {
+    display: flex;
+    justify-content: flex-end; } }
+
+@media screen and (min-width: 64em) {
+  .mu-align--large-left {
+    display: flex;
+    justify-content: flex-start; }
+  .mu-align--large-center {
+    display: flex;
+    justify-content: center; }
+  .mu-align--large-right {
+    display: flex;
+    justify-content: flex-end; } }
+
 .mu-fixed__element {
   transition: all 1s ease-out;
   position: fixed;
@@ -5829,7 +5875,10 @@ table.hover tbody tr:nth-of-type(even):hover {
   overflow: visible;
   clip: auto; }
 
-.components-menu-hamburger {
+html, body {
+  background-color: #fff; }
+
+.docs-menu-hamburger {
   position: fixed;
   top: 0.46875rem;
   left: 0.46875rem;
@@ -5845,11 +5894,11 @@ table.hover tbody tr:nth-of-type(even):hover {
   opacity: .8;
   color: #666; }
   @media screen and (min-width: 40em) {
-    .components-menu-hamburger {
+    .docs-menu-hamburger {
       top: 0.625rem;
       left: 0.625rem; } }
 
-.components-menu {
+.docs-menu {
   position: fixed;
   top: 0.46875rem;
   left: 0.46875rem;
@@ -5863,20 +5912,20 @@ table.hover tbody tr:nth-of-type(even):hover {
   overflow-y: scroll;
   z-index: 99999; }
   @media screen and (min-width: 40em) {
-    .components-menu {
+    .docs-menu {
       top: 0.625rem;
       left: 0.625rem; } }
   @media screen and (min-width: 40em) {
-    .components-menu {
+    .docs-menu {
       padding: 1.25rem; } }
 
-.component-title {
+.docs-title {
   position: fixed;
   bottom: 0.46875rem;
   left: 0.46875rem;
   z-index: 9999; }
   @media screen and (min-width: 40em) {
-    .component-title {
+    .docs-title {
       bottom: 0.625rem;
       left: 0.625rem; } }
 
