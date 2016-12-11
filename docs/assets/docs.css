@@ -3405,6 +3405,9 @@ table.hover tbody tr:nth-of-type(even):hover {
     margin-left: -2em;
     width: 2em; }
 
+.mu-icon-list__entry:last-child {
+  margin-bottom: 0; }
+
 .mu-icon-list--horizontal {
   padding-left: 0; }
   .mu-icon-list--horizontal .mu-icon-list__entry {

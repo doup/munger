@@ -18,6 +18,10 @@
             width: 2em;
         }
     }
+    
+    .mu-icon-list__entry:last-child {
+        margin-bottom: 0;
+    }
 
     .mu-icon-list--horizontal {
         padding-left: 0;
