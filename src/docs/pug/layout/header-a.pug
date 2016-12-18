@@ -15,15 +15,21 @@ block header
                 a.mu-header__logo(href='#')
                     h1 Cello Verd
                 .mu-header__hover.show-for-large
+                    ul.mu-header__alt-menu(data-dropdown-menu)
+                        li
+                            a(href='#') Català <i class="fa fa-angle-down"></i></a>
+                            ul.locale-menu
+                                li: a(href='#') Castellano
+                                li: a(href='#') English
                     ul.mu-header__alt-menu
                         li: a(href='#') ES
                         li: a(href='#') CA
                         li: a(href='#') EN
-                    ul.mu-header__alt-menu.mu-header__alt-menu--separator
+                    ul.mu-header__alt-menu
                         li: a(href='#') <i class="fa fa-fw fa-linkedin"></i>
                         li: a(href='#') <i class="fa fa-fw fa-twitter"></i>
                         li: a(href='#') <i class="fa fa-fw fa-facebook"></i>
-                    ul.mu-header__alt-menu.mu-header__alt-menu--separator
+                    ul.mu-header__alt-menu
                         li: a(href='#') <i class="fa fa-fw fa-search"></i>
                 .mu-header__hover.mu-header__hover--middle.hide-for-large
                     a.mu-header__hamburger: i.fa.fa-fw.fa-bars
