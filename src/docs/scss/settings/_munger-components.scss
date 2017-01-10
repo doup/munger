@@ -1,8 +1,8 @@
 @import 'munger';
 
 @include munger-layout-align;
-//@include munger-layout-header;
 @include munger-layout-fixed;
+//@include munger-layout-header;
 @include munger-list-icon-list;
 @include munger-misc-anchor;
 @include munger-misc-bg;
@@ -10,3 +10,6 @@
 @include munger-section-edge-image;
 @include munger-typography-small;
 @include munger-typography-text-columns;
+
+// Magnific Popup
+@import 'magnific-popup';

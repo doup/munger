@@ -4801,6 +4801,10 @@ $.magnificPopup.registerModule(RETINA_NS, {
         function checkScroll() {
             var el = getFixedEl();
             
+            if (!el) {
+                return;
+            }
+            
             if ($(window).scrollTop() > +el.data('mu-fixed-top')) {
                 $('body').addClass('mu-fixed').addClass('mu-fixed--'+ Foundation.MediaQuery.current);
 
@@ -4830,5 +4834,19 @@ $.magnificPopup.registerModule(RETINA_NS, {
         // Classic hack to wait the event loop/repaint/whatever
         // Otherwise Foundation.MediaQuery.current is not available
         setTimeout(init, 0);
+        
+        // -----
+        // MEDIA
+        // -----
+        $('[data-mu-media-popup]').magnificPopup({ type:'image' });
+        $('[data-mu-media-gallery]').each(function () {
+            $(this).magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                }
+            });
+        });
     });
 })(window.jQuery);

@@ -57,7 +57,7 @@ gulp.task('docs:copy:public', function (done) {
 });
 
 gulp.task('docs:pug', function () {
-    return gulp.src(['src/docs/pug/**', '!src/docs/pug/**/_*.pug'])
+    return gulp.src(['src/docs/pug/**/*.pug', '!src/docs/pug/**/_*.pug'])
         .pipe(pug({
             locals: {
                 url: (url) => baseUrl + url,
@@ -72,6 +72,7 @@ gulp.task('docs:scss', function () {
             includePaths: [
                 'node_modules/font-awesome/scss',
                 'node_modules/foundation-sites/scss',
+                'node_modules/magnific-popup/dist',
                 'src/scss',
             ]
         }).on('error', sass.logError))
