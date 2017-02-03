@@ -1,10 +1,10 @@
 $mu-header-logo-size: 260px 80px !default;
 $mu-header-padding: .5 !default;
 
-@mixin munger-layout-header {  
+@mixin munger-layout-header {
     // Initialize var in mixin scope
     $mu-header-logo-size-map: null !default;
-  
+
     // Conver logo size variable into a map if it's not already
     @if type-of($mu-header-logo-size) == 'map' {
         $mu-header-logo-size-map: $mu-header-logo-size;
@@ -13,7 +13,7 @@ $mu-header-padding: .5 !default;
             small: $mu-header-logo-size
         );
     }
-    
+
     // Heights based on breakpoint logo-size
     @each $size in (small medium large) {
         @if map-has-key($mu-header-logo-size-map, $size) {
@@ -23,18 +23,18 @@ $mu-header-padding: .5 !default;
                 .mu-header__row--logo {
                     @include mu-with-gutter-size($mu-header-logo-row-height, height);
                 }
-                
+
                 .mu-header__logo {
                     width: nth(map-get($mu-header-logo-size-map, $size), 1);
                     height: nth(map-get($mu-header-logo-size-map, $size), 2);
                 }
-                
-                .mu-header__menu {        
+
+                .mu-header__menu {
                     > li > a {
                         @include mu-with-gutter-size($mu-header-logo-row-height, height, line-height);
                     }
                 }
-                
+
                 .mu-header__hover--middle {
                     @include mu-with-gutter-size($mu-header-logo-row-height, height);
                 }
@@ -43,39 +43,39 @@ $mu-header-padding: .5 !default;
     }
 
     .mu-header {
-        
+
     }
 
     .mu-header__row {
         @include mu-with-gutter-size($mu-header-padding / 2, padding-top, padding-bottom);
         display: flex !important;
-        position: relative;        
+        position: relative;
     }
-    
+
     .mu-header__row--logo {
         padding-top: 0;
         padding-bottom: 0;
     }
-    
-    .mu-header__menu {        
+
+    .mu-header__menu {
         > li > a {
             padding-top: 0;
             padding-bottom: 0;
         }
     }
-    
+
     .mu-header__menu--start {
         > li:first-child > a {
             margin-left: -1rem;
         }
     }
-    
+
     .mu-header__menu--end {
         > li:last-child > a {
             margin-right: -1rem;
         }
     }
-    
+
     .mu-header__menu--text-bottom {
         > li > a {
             @include mu-with-gutter-size($mu-header-padding, padding-bottom);
@@ -83,7 +83,7 @@ $mu-header-padding: .5 !default;
             vertical-align: bottom;
             line-height: 1em !important;
         }
-        
+
         > .is-dropdown-submenu-parent > a:after {
             top: inherit;
             @include mu-with-gutter-size($mu-header-padding 5, bottom);
@@ -94,8 +94,12 @@ $mu-header-padding: .5 !default;
         @include mu-with-gutter-size($mu-header-padding, margin-top);
         display: inline-block;
         text-indent: -999em;
+        background-size: contain;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
     }
-    
+
     .mu-header__hamburger {
         margin-left: .5em;
         display: inline-block;
@@ -107,39 +111,39 @@ $mu-header-padding: .5 !default;
         border: 1px solid #eee;
         border-radius: 3px;
     }
-    
+
     .mu-header__hover {
         position: absolute;
         @include mu-with-gutter-size($mu-header-padding, top);
         @include mu-with-gutter-size(.5, right);
     }
-    
+
     .mu-header__hover--left {
         @include mu-with-gutter-size(.5, left);
         right: auto;
     }
-    
+
     .mu-header__hover--top-edge {
         top: 0;
-        
+
         .mu-header__hamburger {
             border-top: 0;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
         }
     }
-    
+
     .mu-header__hover--middle {
         top: 0;
         display: flex;
         align-items: center;
     }
-    
+
     .mu-header__hover--bottom {
         @include mu-with-gutter-size($mu-header-padding, bottom);
         top: inherit;
     }
-    
+
     .mu-header__alt-menu {
         display: inline-block;
         font-size: 1.1rem;
@@ -152,7 +156,7 @@ $mu-header-padding: .5 !default;
             margin: 0 .5em;
         }
     }
-    
+
     .mu-header__alt-menu:last-child {
         border-right: 0;
     }

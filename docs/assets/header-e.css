@@ -65,7 +65,11 @@
 .mu-header__logo {
   margin-top: 0.625rem;
   display: inline-block;
-  text-indent: -999em; }
+  text-indent: -999em;
+  background-size: contain;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat; }
   @media print, screen and (min-width: 40em) {
     .mu-header__logo {
       margin-top: 0.9375rem; } }
