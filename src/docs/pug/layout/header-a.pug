@@ -32,10 +32,15 @@ block header
                     ul.mu-header__alt-menu
                         li: a(href='#') <i class="fa fa-fw fa-search"></i>
                 .mu-header__hover.mu-header__hover--middle.hide-for-large
-                    a.mu-header__hamburger: i.fa.fa-fw.fa-bars
+                    a.mu-header__hamburger(data-mu-mobile-menu-toggle): i.fa.fa-fw.fa-bars
         .header-a__menu-wrapper(data-mu-fixed='large')
             .row.column.show-for-large
                 +menu('mu-header__menu--start header-a__menu')
+        .mu-header__mobile-menu(data-mu-mobile-menu)
+            .row
+                .small-12.columns
+                    h1 test
+            
 
 block content
     include ../partials/_twelve-columns
