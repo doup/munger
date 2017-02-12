@@ -4831,10 +4831,12 @@ $.magnificPopup.registerModule(RETINA_NS, {
         $(window).on('scroll', checkScroll);
         
         // Init
-        // Classic hack to wait the event loop/repaint/whatever
+        // Wait the event loop/repaint/whatever: http://stackoverflow.com/a/23254061/379923
         // Otherwise Foundation.MediaQuery.current is not available
-        setTimeout(init, 0);
-        
+        $(window).load(function () {
+            window.requestAnimationFrame(init);
+        });
+
         // -----
         // MEDIA
         // -----
