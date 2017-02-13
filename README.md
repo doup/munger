@@ -31,6 +31,7 @@ SASS+HTML components following BEM convention on top of Foundation
 - http://totaltheme.wpengine.com/features/builder-modules/
 - http://the7.dream-demo.com/
 
+- https://www.lightningdesignsystem.com/components-overview/
 - https://en.bem.info/platform/libs/bem-components/5.0.0/
 - https://github.com/MartijnKeesmaat/Axis
 
