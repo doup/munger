@@ -1,6 +1,0 @@
-@import 'settings/foundation-settings';
-@import 'munger';
-
-$mu-header-logo-size: 288px 60px;
-
-@include munger-layout-header;
