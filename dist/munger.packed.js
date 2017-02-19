@@ -4837,10 +4837,50 @@ $.magnificPopup.registerModule(RETINA_NS, {
             window.requestAnimationFrame(init);
         });
 
+        // -------------- 
+        // MU MOBILE MENU
+        // --------------
+        var header           = $('.mu-header');
+        var mobileMenu       = $('[data-mu-mobile-menu]');
+        var hamburger        = $('[data-mu-hamburger]');
+        var hamburgerIcon    = $('[data-mu-hamburger-icon]');
+        var hamburgerClasses = hamburger.data('mu-hamburger').split(',');
+
+        mobileMenu.data('isVisible', false);
+
+        function mobileMenuShow() {
+            var height = header.outerHeight();
+            
+            $('body').addClass('mu-no-scroll');
+            header.addClass('mu-header--mobile-menu-visible');
+            mobileMenu.css('padding-top', height);
+            mobileMenu.show();
+            mobileMenu.data('isVisible', true);
+            hamburgerIcon.attr('class', hamburgerClasses[1]);
+        }
+
+        function mobileMenuHide() {
+            $('body').removeClass('mu-no-scroll');
+            header.removeClass('mu-header--mobile-menu-visible');
+            mobileMenu.hide();
+            mobileMenu.data('isVisible', false);
+            hamburgerIcon.attr('class', hamburgerClasses[0]);
+        }
+
+        function mobileMenuToggle() {
+            if (mobileMenu.data('isVisible')) {
+                mobileMenuHide();
+            } else {
+                mobileMenuShow();
+            }
+        }
+
+        hamburger.click(mobileMenuToggle);
+
         // -----
         // MEDIA
         // -----
-        $('[data-mu-media-popup]').magnificPopup({ type:'image' });
+        $('[data-mu-media-popup]').magnificPopup({ type: 'image' });
         $('[data-mu-media-gallery]').each(function () {
             $(this).magnificPopup({
                 delegate: 'a',

@@ -43,7 +43,7 @@ $mu-header-padding: .5 !default;
     }
 
     .mu-header {
-
+        z-index: 11;
     }
 
     .mu-header__row {
@@ -100,18 +100,6 @@ $mu-header-padding: .5 !default;
         background-repeat: no-repeat;
     }
 
-    .mu-header__hamburger {
-        margin-left: .5em;
-        display: inline-block;
-        line-height: 38px;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        font-size: 19.2px;
-        border: 1px solid #eee;
-        border-radius: 3px;
-    }
-
     .mu-header__hover {
         position: absolute;
         @include mu-with-gutter-size($mu-header-padding, top);
@@ -159,5 +147,42 @@ $mu-header-padding: .5 !default;
 
     .mu-header__alt-menu:last-child {
         border-right: 0;
+    }
+    
+    .mu-hamburger {
+        margin-left: .5em;
+        display: inline-block;
+        line-height: 38px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 19.2px;
+        border: 1px solid #eee;
+        border-radius: 3px;
+    }
+
+    .mu-no-scroll {
+        overflow: hidden;
+    }
+
+    .mu-header--mobile-menu-visible {
+        position: fixed;
+        width: 100%;
+    }
+
+    .mu-mobile-menu {
+        z-index: 10;
+        display: none;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .mu-mobile-menu__content {
+        @include mu-with-gutter-size(1, padding);
+        height: 100%;
+        overflow-y: scroll;
     }
 }

@@ -12,7 +12,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - Layout
         - `mu-align`
         - `mu-fixed`
-        - `mu-header`
+        - `mu-header`, which includes:
+            - `mu-hamburger`
+            - `mu-mobile-menu`
     - List
         - `mu-icon-list`
     - Misc
