@@ -7,7 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
-- Basic non-intrusive menu for the docs
 - Following components added:
     - Layout
         - `mu-align`
@@ -27,6 +26,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
         - `mu-small`/`mu-smaller`
         - `mu-text-columns`
 - `mu-with-gutter-size` mixin, useful to set property values using the different media query based gutter sizes defined by Foundation `$grid-column-gutter`.
+- Dependencies via `yarn`.
+
+### Removed
+- Documentation moved to the [`munger-docs`](https://github.com/doup/munger-docs) repository. The docs will still be saved in the `gh-pages` branch on the `munger` repository.
 
 ### Changed
 - …
