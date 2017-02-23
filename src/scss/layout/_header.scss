@@ -185,4 +185,43 @@ $mu-header-padding: .5 !default;
         height: 100%;
         overflow-y: scroll;
     }
+
+    .mu-mobile-menu__menu {
+        margin: 0;
+
+        & > .menu-item {
+            list-style: none;
+        }
+
+        li {
+            display: block;
+            margin: 0 auto;
+
+            a {
+                padding: .7rem 0;
+                line-height: 1em;
+                display: block;
+            }
+        }
+
+        .menu--submenu {
+            > li {
+                margin-left: 2em;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    top: 1.1em;
+                    left: -2em;
+                    border-radius: 3px;
+                    position: absolute;
+                    width: 1.5em;
+                    height: 2px;
+                    background-color: currentColor;
+                    opacity: .65;
+                    display: block;
+                }
+            }
+        }
+    }
 }
