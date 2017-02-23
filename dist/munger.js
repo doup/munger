@@ -95,12 +95,15 @@
 
         mobileMenu.data('isVisible', false);
 
-        function mobileMenuShow() {
+        function mobileMenuSetTopPadding() {
             var height = header.outerHeight();
-            
+            mobileMenu.css('padding-top', height);
+        }
+
+        function mobileMenuShow() {
+            mobileMenuSetTopPadding();
             $('body').addClass('mu-no-scroll');
             header.addClass('mu-header--mobile-menu-visible');
-            mobileMenu.css('padding-top', height);
             mobileMenu.show();
             mobileMenu.data('isVisible', true);
             hamburgerIcon.attr('class', hamburgerClasses[1]);
@@ -123,6 +126,7 @@
         }
 
         hamburger.click(mobileMenuToggle);
+        $(window).on('changed.zf.mediaquery', mobileMenuSetTopPadding);
 
         // -----
         // MEDIA
