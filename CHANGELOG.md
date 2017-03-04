@@ -24,7 +24,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - …
 
-## [0.2.0] - 2017-03-04 / Kalendae
+## [0.2.2] - 2017-03-04 / Kalendae
+### Added
+- jQuery 2.x as dependency
+
+## [0.2.0]
 ### Added
 - Following components added:
     - Layout

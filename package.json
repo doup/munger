@@ -29,6 +29,7 @@
     "gulp-uglify": "^2.0.0"
   },
   "dependencies": {
+    "jquery": "2.*",
     "font-awesome": "4.*",
     "foundation-sites": "6.3.*",
     "magnific-popup": "^1.1.0",
