@@ -1,6 +1,6 @@
 {
   "name": "munger",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "SASS+HTML components following BEM convention on top of Foundation",
   "main": "dist/munger.packed.js",
   "scripts": {
