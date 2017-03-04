@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
+- …
+
+### Changed
+- …
+
+### Deprecated
+- …
+
+### Removed
+- …
+
+### Fixed
+- …
+
+### Security
+- …
+
+## [0.2.0] - 2017-03-04 / Kalendae
+### Added
 - Following components added:
     - Layout
         - `mu-align`
@@ -31,15 +50,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 - Documentation moved to the [`munger-docs`](https://github.com/doup/munger-docs) repository. The docs will still be saved in the `gh-pages` branch on the `munger` repository.
 
-### Changed
-- …
-- …
-
-### Fixed
-- …
-- …
-
 ## 0.1.0 - 2016-09-06
 ### Added
 - Project structure defined
 - Gulp build pipeline prepared
+
+
